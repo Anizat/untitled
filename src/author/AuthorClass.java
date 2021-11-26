@@ -7,51 +7,52 @@ public class AuthorClass {
     private int age;
     private String gender;
 
-    AuthorClass(){}
 
-    AuthorClass(String name, String surname, String email, int age, String gender){
+    public AuthorClass(String name, String surname, int email, String age, String gender){
         name = this.name;
         surname = this.surname;
         email = this.email;
-        age = this.age;
         gender = this.gender;
+        age = this.age;
 
+    }
+    public AuthorClass(String name, String surname, String email, String gender, int age){
     }
 
     public String getName() {
-        return this.name;
+        return name;
+    }
+        public void setName(String name){
+            this.name = name;
+        }
 
-        String getSurname;() {
-            return this.surname;
+        String getSurname() {
+            return surname;
         }
-        String getEmail;(){
-            return this.email;
-        }
-        int getAge;(){
-            return this.age;
-        }
-        public String getGender;(){
-            return this.gender;
-        }
-    }
-    public void setName(String name){
-        this.name = name;
-    }
     public void setSurname(String surname){
         this.surname = surname;
     }
+        String getEmail(){
+            return email;
+        }
     public void setEmail (String email){
         this.email = email;
     }
+        int getAge(){
+            return age;
+        }
     public void setAge(int age) {
         this.age = age;
     }
+
+        public String getGender(){
+            return gender;
+        }
     public void setGender(String gender){
         this.gender = gender;
     }
+    @Override
     public String toString(){
-        String info =this.name + this.surname + this.email +
-                this.age +this.gender;
-        return info;
-    }
+        return "Author" + "name = " + name +'\'' + ", surname = " + surname +'\'' +
+                ", age = " + age + '\'' + ", email = " + email + '\'' + ", gender = " + gender + '\'';}
 }
